@@ -1,0 +1,38 @@
+<div *ngIf="coupon">
+    <form name="titles" id="titles">
+        <h3>Title:</h3>
+        <h3>Category:</h3>
+        <h3>Company:</h3>
+        <h3>Description:</h3>
+        <h3>Price:</h3>
+        <h3>Start Date:</h3>
+        <h3>End Date:</h3>
+        
+    </form>
+    <form name="information" id="information">
+        <br>
+        <br>
+        <input type="text" [(ngModel)]="coupon.title" name="couponTitleFromTS" readonly>
+        <br>
+        <br>
+        <input type="text" [(ngModel)]="coupon.category" name="couponCategoryFromTS" readonly>
+        <br>
+        <br>
+        <input type="text" [(ngModel)]="coupon.company.name" name="couponCompanyFromTS" readonly>
+        <br>
+        <br>
+        <br>
+        <input type="text" [(ngModel)]="coupon.description" name="couponDescriptionFromTS" readonly>
+        <br>
+        <br>
+        <input type="text" [(ngModel)]="coupon.price" name="couponPriceFromTS" readonly>
+        <br>
+        <br>
+        <br>
+        <input type="text" [(ngModel)]="coupon.startDate" name="couponStartDateFromTS" readonly>
+        <br>
+        <br>
+        <input type="text" [(ngModel)]="coupon.endDate" name="couponendDateFromTS" readonly>
+    </form>
+    <button name="purchaseButton" (click)="purchaseCoupon()">Purchase?</button>
+</div>

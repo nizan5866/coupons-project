@@ -1,0 +1,18 @@
+<div *ngIf="newCustomerRequest">
+    <form name="titles" id = "titles">
+        <h3>Date Of Request:</h3>
+        <h3>First Name:</h3>
+        <h3>Last Name:</h3>
+        <h3>Email:</h3>
+        <h3>Password:</h3>
+    </form>
+    <form name="information" id="information">
+        <h3>{{newCustomerRequest.dateOfRequest}}</h3>
+        <h3>{{newCustomerRequest.firstName}}</h3>
+        <h3>{{newCustomerRequest.lastName}}</h3>
+        <h3>{{newCustomerRequest.email}}</h3>
+        <h3>{{newCustomerRequest.password}}</h3>
+    </form>
+</div>
+<hr>
+<button (click) = "approveNewCustomerRequest()">Approve</button>

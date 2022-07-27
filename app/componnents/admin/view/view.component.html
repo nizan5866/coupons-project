@@ -1,0 +1,57 @@
+<section id="main" name="main">
+    <ng-template #loading>
+        <img src="../../../assets/images/loading.jpg" alt="" width="300px">
+    </ng-template>
+    <section id="companies">
+        <h1>Companies requests</h1>
+        <section id="companiesTable">
+            <table *ngIf="adminService.newCompaniesRegistrationList;else loading">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Password</th>
+                        <th>Date of request</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let company of adminService.newCompaniesRegistrationList"
+                        routerLink="/admin/approve-company-request/{{company.id}}">
+                        <td>{{company.name}}</td>
+                        <td>{{company.email}}</td>
+                        <td>{{company.password}}</td>
+                        <td>{{company.dateOfRequest}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </section>
+
+    <section id="customers">
+        <h1>Customers requests</h1>
+        <section id="companiesTable">
+            <table *ngIf="adminService.newCustomersRegistrationList;else loading">
+                <thead>
+                    <tr>
+                        <th>Full Name</th>
+                        <th>Email</th>
+                        <th>Password</th>
+                        <th>Date of request</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let customer of adminService.newCustomersRegistrationList"
+                        routerLink="/admin/approve-customer-request/{{customer.id}}">
+                        <td>{{customer.firstName}} {{customer.lastName}}</td>
+                        <td>{{customer.email}}</td>
+                        <td>{{customer.password}}</td>
+                        <td>{{customer.dateOfRequest}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </section>
+
+
+
+</section>

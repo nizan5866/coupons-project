@@ -1,0 +1,22 @@
+<div *ngIf="newCompanyRequest">
+    <form name="titles" id = "titles">
+        <h3>Date Of Request:</h3>
+        <h3>Name:</h3>
+        <h3>Email:</h3>
+        <h3>Password:</h3>
+    </form>
+    <form name="information" id="information">
+        <h3>{{newCompanyRequest.dateOfRequest}}</h3>
+        <h3>{{newCompanyRequest.name}}</h3>
+        <h3>{{newCompanyRequest.email}}</h3>
+        <h3>{{newCompanyRequest.password}}</h3>
+    </form>
+    <form name="about" id="about">
+        <h2>About us:</h2>
+    <p>
+        {{newCompanyRequest.about}}
+    </p>
+</form>
+</div>
+<hr>
+<button (click) = "approveNewCompanyRequest()">Approve</button>

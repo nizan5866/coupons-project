@@ -1,0 +1,11 @@
+<section>
+    <input type="text" name="email" id="email" #email placeholder="Email" type="email">
+    <input type="text" name="password" id="password" #password placeholder="Password" type="password">
+    <select name="clientType" id="clientType" #clientType>
+        <option value="CUSTOMER">customer</option>
+        <option value="ADMINISTRATOR">admin</option>
+        <option value="COMPANY">company</option>
+    </select>
+    <button (click)="login(email.value, password.value, clientType.value)">login</button>
+    <a routerLink="register" routerLinkActive="active-link">new client?</a>
+</section>

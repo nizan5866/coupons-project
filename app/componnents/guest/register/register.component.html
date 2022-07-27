@@ -1,0 +1,72 @@
+<h2>New User?</h2>
+<form action="" #formInfo="ngForm">
+    <textarea #companyAboutInfo=ngModel *ngIf="userType.value == 'COMPANY'" type="text" [(ngModel)]="about"
+        placeholder="tell us about your Company" name="companyAbout" id="companyAbout" maxlength="2600"
+        [disabled]="userType.value != 'COMPANY'" #companyAbout required></textarea>
+    <img *ngIf="(about == undefined || about == '') && userType.value == 'COMPANY'" src="assets/images/redX.png"
+        alt="red" name="redForAbout" id="redForAbout">
+    <img *ngIf="about != '' && about != undefined && userType.value == 'COMPANY'" src="assets/images/greenV.png"
+        alt="green" name="greenForAbout" id="redForAbout">
+    <select name="userType" id="userType" #userType required>
+        <option value='null'> -- select an option -- </option>
+        <option value="CUSTOMER">customer</option>
+        <option value="COMPANY">company</option>
+    </select>
+    <img *ngIf="userType.value == 'null'" src="assets/images/redX.png" alt="red">
+    <img *ngIf="userType.value != 'null'" src="assets/images/greenV.png" alt="green">
+    <br>
+    <br>
+    <input type="text" type="email" #emaiInput placeholder="email" required #emailInfo=ngModel email
+        [(ngModel)]="emailForRegister" name="emailInput">
+    <img *ngIf="(emailInfo.errors?.required && emailInfo.touched) || (emailInfo.errors?.email && emailInfo.touched)"
+        src="assets/images/redX.png" alt="red">
+    <span *ngIf="emailInfo.errors?.required && emailInfo.touched">email is missing</span>
+    <span *ngIf="emailInfo.errors?.email && emailInfo.touched">Invalid email adress</span>
+    <img *ngIf="emailInfo.valid" src="assets/images/greenV.png" alt="green">
+    <br>
+    <br>
+    <input type="password" #passwordInput name="passwordInput" placeholder="password" [(ngModel)]="passwordForRegister"
+        #passwordInfo=ngModel minlength="6" required>
+    <img *ngIf="(passwordInfo.errors?.required &&passwordInfo.touched) || 
+    (passwordInfo.errors?.minlength &&passwordInfo.touched)" src="assets/images/redX.png" alt="red">
+    <span *ngIf="passwordInfo.errors?.required &&passwordInfo.touched">password is missing</span>
+    <span *ngIf="passwordInfo.errors?.minlength &&passwordInfo.touched">password must have atleast 6 chars</span>
+    <img *ngIf="passwordInfo.valid" src="assets/images/greenV.png" alt="green">
+
+    <br>
+    <br>
+    <input type="password" #passwordVerified #passwordVerificationInfo=ngModel placeholder="password verification"
+        [(ngModel)]="passwordVerification" name="passwordVerified">
+    <img *ngIf="(passwordVerified.value != passwordInput.value && passwordInfo.touched)" src="assets/images/redX.png"
+        alt="red">
+    <span *ngIf="passwordVerified.value != passwordInput.value && passwordInfo.touched">passwords doesn't match</span>
+    <img *ngIf="passwordVerified.value == passwordInput.value && 
+    passwordForRegister != undefined && passwordForRegister != ''" src="assets/images/greenV.png" alt="green">
+    <br>
+    <br>
+    <input type="text" #NameInput placeholder="name" required #NameInfo=ngModel [(ngModel)]="nameForRegister"
+        name="companyNameInput" minlength="3">
+    <img *ngIf="NameInfo.touched && (NameInfo.errors?.required || NameInfo.errors?.minlength)"
+        src="assets/images/redX.png" alt="red">
+    <img *ngIf="NameInfo.valid" src="assets/images/greenV.png" alt="green">
+    <span *ngIf="NameInfo.errors?.required && NameInfo.touched">must have a name</span>
+    <span *ngIf="NameInfo.errors?.minlength && NameInfo.touched">name must have at least 3 chars</span>
+    <br>
+    <br>
+    <input [disabled]="userType.value != 'CUSTOMER'" type="text" #lastNameInput placeholder="last name" required
+        #LastNameInfo=ngModel [(ngModel)]="lastNameForRegister" name="lasrNateInput" minlength="3">
+    <img *ngIf="LastNameInfo.touched && (LastNameInfo.errors?.required || LastNameInfo.errors?.minlength)"
+        src="assets/images/redX.png" alt="red">
+    <img *ngIf="LastNameInfo.valid" src="assets/images/greenV.png" alt="green">
+    <span *ngIf="LastNameInfo.errors?.required && LastNameInfo.touched">must have a last name</span>
+    <span *ngIf="LastNameInfo.errors?.minlength && LastNameInfo.touched">last name must have at least 3 chars</span>
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+    <button (click)="clearAllFields()">Clear</button>
+    <button [disabled]="formInfo.invalid || passwordVerified.value != passwordInput.value" (click)="sendRegistration(userType.value)">Submit</button>
+
+
+</form>

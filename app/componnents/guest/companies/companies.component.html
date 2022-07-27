@@ -1,0 +1,49 @@
+<ng-template #loading>
+    <img src="../../../assets/images/loading.jpg" alt="" width="300px">
+</ng-template>
+
+<caption>Companies</caption>
+<section>
+    <table *ngIf="companiesName;else loading">
+        <thead>
+            <tr>
+                <th>Company's Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let c of companiesName">
+                <td>{{c}}</td>
+            </tr>
+        </tbody>
+
+    </table>
+</section>
+
+
+
+
+
+<!-- 
+<caption>Products</caption>
+<section>
+    <table *ngIf="products;else loading">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Stock</th>
+                <th>Image</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let p of products" routerLink="/welcome/products-details/{{p.id}}">
+                <td>{{p.name}}</td>
+                <td>{{p.price}}</td>
+                <td>{{p.stock}}</td>
+                <td>
+                    <app-thumbnail imgSrc="/assets/images/{{p.id}}.jpg"></app-thumbnail>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section> -->

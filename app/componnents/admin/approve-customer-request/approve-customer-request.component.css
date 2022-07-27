@@ -1,0 +1,25 @@
+div{
+    display: grid;
+    grid-template-columns: 50% 50% 60%;
+    text-align: left;
+    height: fit-content;
+}
+
+form#titles{
+    grid-column: 1;
+    margin-left: 20%;
+}
+
+form#information{
+    grid-column: 2;
+}
+
+
+h3{
+    font-size: x-large;
+}
+
+button{
+    width: fit-content;
+    font-size: x-large;
+}

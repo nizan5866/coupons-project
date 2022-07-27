@@ -1,0 +1,43 @@
+div{
+    display: grid;
+    grid-template-columns: 12% 28% 60%;
+    text-align: left;
+    height: fit-content;
+}
+
+form#titles{
+    grid-column: 1;
+    margin-left: 20%;
+}
+
+form#information{
+    grid-column: 2;
+}
+
+form#about{
+    border-left: 2px solid rgb(63, 59, 59);
+    grid-column: 3;
+    height: 480px;
+}
+
+h2{
+    margin-left: 5%;
+}
+
+p{
+    margin-left: 5%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    width: 80%;
+    height: 80%;
+    font-size: 20px;
+}
+
+h3{
+    font-size: x-large;
+}
+
+button{
+    width: fit-content;
+    font-size: x-large;
+}

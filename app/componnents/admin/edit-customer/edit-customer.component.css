@@ -1,0 +1,31 @@
+div{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    text-align: left;
+    height: fit-content;
+}
+
+form#titles{
+    grid-column: 1;
+    margin-left: 50%;
+}
+
+form#information{
+    grid-column: 2;
+}
+
+input, h3, button{
+    font-size: xx-large;
+}
+
+h3{
+    position: center;
+}
+
+button{
+    margin: 10px;
+}
+
+input{
+    width: 80%;
+}

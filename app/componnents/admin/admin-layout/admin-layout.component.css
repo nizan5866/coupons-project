@@ -1,0 +1,75 @@
+section{
+    display: grid;
+    grid-template-rows: 7% 15% 73% 5%;
+    grid-template-columns: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+button{
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: 10px;
+    width: 10%;
+}
+
+
+header{
+    grid-row:  1/2;
+    text-align: center;
+    border: 1px solid blanchedalmond;
+    font-size: x-large;
+}
+
+div#menu{
+    grid-row: 2/3;
+    text-align: center;
+    border: 1px solid blanchedalmond;
+}
+
+a{
+    margin-left: 100px;
+    font-size: 34px;
+    color: cyan;
+    text-decoration:rgb(47, 47, 148);
+}
+
+.active-link{
+    color: blanchedalmond;
+    text-decoration: underline;
+}
+
+a:active{
+    color: blanchedalmond;
+}
+
+a:focus{
+    color: blanchedalmond;
+}
+
+a:hover{
+    color: wheat;
+}
+
+
+main{
+    grid-row: 3/4;
+    text-align: center;
+    border: 1px solid blanchedalmond;
+}
+
+footer{
+grid-row: 4/5;
+text-align: center;
+border: 1px solid blanchedalmond;
+}
+
+header{
+    text-align: center;
+    margin-top: 0;
+    position: relative;
+    top: 150%;
+    transform: translateY(-150%);
+    font-size: 200%;
+}

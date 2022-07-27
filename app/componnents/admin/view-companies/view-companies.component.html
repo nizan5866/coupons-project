@@ -1,0 +1,26 @@
+<section id="main" name="main">
+    <section id="theTable">
+        <ng-template #loading>
+            <img src="../../../assets/images/loading.jpg" alt="" width="300px">
+        </ng-template>
+
+        <section id="companiesTable" name="companiesTable">
+            <table *ngIf="adminService.companies;else loading">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Password</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let c of adminService.companies" 
+                    routerLink="/admin/edit-company//{{c.id}}">
+                        <td>{{c.name}}</td>
+                        <td>{{c.email}}</td>
+                        <td>{{c.password}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </section>

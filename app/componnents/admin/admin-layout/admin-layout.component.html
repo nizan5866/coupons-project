@@ -1,0 +1,25 @@
+<section>
+
+
+    <header>
+        Hello Admin, Welcome to the coupon system website
+        <button (click)="logout()">logout</button>
+    </header>
+
+    <div id="menu">
+        <a routerLink="view" routerLinkActive="active-link">view new requests</a>
+        <a routerLink="view-companies" routerLinkActive="active-link">view companies</a>
+        <a routerLink="view-customers" routerLinkActive="active-link">view customers</a>
+    </div>
+
+    <main>
+        <router-outlet></router-outlet>
+    </main>
+
+    <footer>
+        <div>
+            <p>All Rights Reserved To Nitsan David Gabbay &copy;</p>
+        </div>
+    </footer>
+
+</section>

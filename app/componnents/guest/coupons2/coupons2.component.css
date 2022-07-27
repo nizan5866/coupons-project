@@ -1,0 +1,93 @@
+section#main{
+    display: grid;
+    grid-template-columns: 25% 75%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+
+section#couponsTable{
+    overflow: auto;
+    max-height: 500px;
+}
+
+section#theTable{
+    grid-column: 2;
+    grid-row: 1;
+    text-align: left;
+    border: 1px solid blanchedalmond;
+}
+
+div#menu{
+    margin-left: 20px;
+    grid-column: 1;
+    grid-row: 1;
+    text-align: left;
+    height: 100%;
+}
+
+table th{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: rgb(9, 38, 39);
+}
+
+
+table{
+    max-height: 900px;
+    width: 100%;
+    background-color: rgb(9, 38, 39);
+    margin: auto;
+}
+  
+
+table, tr, td{
+    border: 1px solid rgb(9, 38, 39);
+    font-size: x-large;
+    text-align: center;
+}
+
+td{
+    height: 40px;
+}
+
+
+tbody> tr:nth-child(odd){
+    background-color: rgb(20, 20, 20);
+}
+
+tbody> tr:nth-child(even){
+    background-color: rgb(9, 10, 40);
+}
+
+select{
+    width: 60%;
+    height: 5%;
+    font-size: 15px;
+}
+
+input{
+    width: 58%;
+    height: 4%;
+    font-size: 15px;
+
+}
+
+button{
+    width: 60%;
+    height: 6%;
+    font-size: x-large;
+}
+
+input#checkBoxFilter{
+    width: 10%;
+}
+
+img{
+    position: relative;
+    left: 25%;
+    width: 50%;
+}
+

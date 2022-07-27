@@ -1,0 +1,28 @@
+<section>
+
+    <div id="login">
+        <app-login></app-login>
+        <!-- <a routerLink="register" routerLinkActive="active-link">new client?</a> -->
+    </div>
+
+    <header>
+        Hello Guest, Welcome to the coupon system website
+    </header>
+
+    <div id="menu">
+        <a routerLink="companies" routerLinkActive="active-link">view companies</a>
+        <a routerLink="coupons" routerLinkActive="active-link">view coupons</a>
+        <a routerLink="about" routerLinkActive="active-link">About</a>
+    </div>
+
+    <main>
+        <router-outlet></router-outlet>
+    </main>
+
+    <footer>
+        <div>
+            <p>All Rights Reserved To Nitsan David Gabbay &copy;</p>
+        </div>
+    </footer>
+
+</section>

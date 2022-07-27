@@ -1,0 +1,13 @@
+a{
+    color: white;
+    margin-left: 5px;
+}
+
+a:hover{
+    color: greenyellow;
+}
+
+input, select{
+    margin-right: 5px;
+    width: 150px;
+}

@@ -1,0 +1,55 @@
+span{
+    position: absolute;
+    color: red;
+    margin-left: 3.5%;
+    font-size: x-large;
+}
+
+img{
+    margin-left: 1%;
+    position: absolute;
+    width: 20px;
+}
+
+img#redForAbout{
+    position: absolute;
+    left: 34%;
+}
+
+img#greenForAbout{
+    position: absolute;
+    left: 3%;
+}
+
+form{
+    padding: 25px;
+    margin: 25px;
+    height: 75%;
+}
+
+input{
+    position: inherit;
+    width: 25%;
+    height: 7%;
+    font-size: x-large;
+}
+
+select{
+    width: 25.5%;
+    height: 7%;
+    font-size: x-large;
+}
+
+textarea{
+    position: absolute;
+    left: 4%;
+    width: 30%;
+    height: 30.8%;
+    font-size: x-large;
+}
+
+button{
+    font-size: x-large;
+    width: 10%;
+    margin-left: 1%;
+}
